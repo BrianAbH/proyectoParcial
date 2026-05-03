@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
+    android:background="#ffffff"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
@@ -51,10 +52,9 @@
     <!--Card con la seccion de saludo-->
     <androidx.cardview.widget.CardView
         android:id="@+id/cardSalute"
-        android:layout_width="342dp"
-        android:layout_height="96dp"
+        android:layout_width="352dp"
+        android:layout_height="94dp"
         android:layout_marginTop="40dp"
-        android:foregroundGravity="center_vertical"
         app:cardBackgroundColor="#FFFFFF"
         app:cardCornerRadius="16dp"
         app:cardElevation="10dp"
@@ -64,7 +64,49 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/header">
 
-        <!--Contenedor de los componentes view dentro de la card-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clPadre"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="11dp">
+
+            <!--Text de Bienvenido-->
+            <TextView
+                android:id="@+id/tvBienvenido"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/home_greeting_default"
+                android:textColor="@color/text"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!--Text Personalizado para mostrar el saludo-->
+            <TextView
+                android:id="@+id/tvSaludo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="hola"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvBienvenido" />
+
+            <!--Texto Universidad de Guayaquil-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/home_university"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvSaludo" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!--Contenedor de los componentes view dentro de la card
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -72,37 +114,16 @@
             android:gravity="center_vertical"
             android:orientation="vertical">
 
-            <!--Text de Bienvenido-->
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/home_greeting_default"
-                android:textColor="@color/text"
-                android:textSize="22sp"
-                android:textStyle="bold" />
-            <!--Text Personalizado para mostrar el saludo-->
-            <TextView
-                android:id="@+id/tvSaludo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="hola"
-                android:textSize="15sp" />
 
-            <!--Texto Universidad de Guayaquil-->
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/home_university"
-                android:textSize="15sp" />
-        </LinearLayout>
+        </LinearLayout>-->
 
     </androidx.cardview.widget.CardView>
 
     <!--GridLayout con las cards-->
     <GridLayout
         android:id="@+id/glCards"
-        android:layout_width="339dp"
-        android:layout_height="285dp"
+        android:layout_width="match_parent"
+        android:layout_height="303dp"
         android:layout_marginTop="20dp"
         android:columnCount="2"
         android:rowCount="2"
