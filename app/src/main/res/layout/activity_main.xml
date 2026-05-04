@@ -11,12 +11,15 @@
     <LinearLayout
         android:id="@+id/header"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="250dp"
         android:background="@color/primary_dark"
         android:orientation="vertical"
         android:gravity="center_vertical"
-        tools:ignore="MissingConstraints"
-        android:padding="16dp">
+        app:layout_constraintBaseline_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:padding="20dp">
+
         <!--Logo-->
         <androidx.cardview.widget.CardView
             android:layout_width="64dp"
@@ -37,7 +40,7 @@
             android:textColor="#FFFFFF"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="30sp"
+            android:textSize="35sp"
             android:textStyle="bold" />
 
         <!--Subtitulo-->
@@ -47,7 +50,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:textSize="12sp"/>
+            android:textSize="20sp"/>
 
     </LinearLayout>
 
@@ -125,8 +128,8 @@
         <!--Card de Registrar-->
         <androidx.cardview.widget.CardView
             android:id="@+id/cvRegistrar"
-            android:layout_width="153dp"
-            android:layout_height="117dp"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
             android:layout_margin="8dp"
@@ -142,8 +145,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:padding="25dp"
                 android:gravity="center_vertical"
-                android:padding="10dp"
                 android:orientation="vertical">
 
                 <!--Card con el logo-->
@@ -155,12 +158,13 @@
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
                         android:src="@drawable/ic_register" />
                 </androidx.cardview.widget.CardView>
 
                 <!--Titulo-->
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/home_tile_register_label"
                     android:textSize="18sp"
@@ -168,7 +172,7 @@
 
                 <!--SubTitulo-->
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/home_tile_register_sub"
                     android:textSize="15sp" />
@@ -196,7 +200,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center_vertical"
-                android:padding="10dp"
+                android:padding="25dp"
                 android:orientation="vertical">
 
                 <!--Card con el logo-->
@@ -209,6 +213,7 @@
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
                         android:src="@drawable/ic_stock" />
                 </androidx.cardview.widget.CardView>
 
@@ -248,7 +253,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:padding="10dp"
+                android:padding="25dp"
                 android:gravity="center_vertical"
                 android:orientation="vertical">
 
@@ -262,6 +267,7 @@
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
                         android:src="@drawable/ic_settings" />
                 </androidx.cardview.widget.CardView>
 
@@ -302,7 +308,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:padding="10dp"
+                android:padding="25dp"
                 android:gravity="center_vertical"
                 android:orientation="vertical">
 
@@ -316,6 +322,7 @@
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
                         android:src="@drawable/ic_report" />
                 </androidx.cardview.widget.CardView>
 
@@ -343,7 +350,7 @@
         android:id="@+id/btnUriUg"
         android:layout_width="0dp"
         android:layout_margin="16dp"
-        android:layout_height="60dp"
+        android:layout_height="70dp"
         android:backgroundTint="@color/primary_dark"
         android:text="@string/btn_home_university"
         android:textSize="18sp"

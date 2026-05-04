@@ -4,7 +4,7 @@
     <string name="app_name">Inventario UG</string>
     <string name="app_subtitle">Equipos de laboratorio</string>
     <string name="home_greeting_default">Bienvenido</string>
-    <string name="home_university">Univesidad de Guayaquil</string>
+    <string name="home_university">Universidad de Guayaquil</string>
 
     <string name="home_tile_register_label">Registrar</string>
     <string name="home_tile_register_sub">Nuevo elemento</string>
