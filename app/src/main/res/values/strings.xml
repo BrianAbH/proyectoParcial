@@ -20,6 +20,13 @@
 
 
     <string name="btn_home_university">Sitio web Univesidad de Guayaquil</string>
-    <string name="footer_version">v1.0 · Proyecto académico</string>
     <string name="university_url">https://www.ug.edu.ec</string>
+    
+    
+    
+    
+    <!--Preferencias-->
+    <string name="titulo_preferencias">Preferencias</string>
+    <string name="ic_back">Volver atras</string>
+    
 </resources>
