@@ -2,31 +2,43 @@
 
     <!-- App -->
     <string name="app_name">Inventario UG</string>
-    <string name="app_subtitle">Equipos de laboratorio</string>
-    <string name="home_greeting_default">Bienvenido</string>
-    <string name="home_university">Universidad de Guayaquil</string>
+    <string name="app_subtitulo">Equipos de laboratorio</string>
+    <string name="inicio_saludo_pordefecto">Bienvenido</string>
+    <string name="inicio_universidad">Universidad de Guayaquil</string>
 
-    <string name="home_tile_register_label">Registrar</string>
-    <string name="home_tile_register_sub">Nuevo elemento</string>
+    <string name="inicio_titulo_registro_label">Registrar</string>
+    <string name="inicio_titulo_registro_sub">Nuevo elemento</string>
 
-    <string name="home_tile_list_label">Inventario</string>
-    <string name="home_tile_list_sub">Ver elementos</string>
+    <string name="inicio_titulo_inventario_label">Inventario</string>
+    <string name="inicio_titulo_inventario_sub">Ver elementos</string>
 
-    <string name="home_tile_prefs_label">Preferencias</string>
-    <string name="home_tile_prefs_sub">Datos personales</string>
+    <string name="inicio_titulo_prefs_label">Preferencias</string>
+    <string name="inicio_titulo_prefs_sub">Datos personales</string>
 
-    <string name="home_tile_report_label">Reporte</string>
-    <string name="home_tile_report_sub">Resumen general</string>
+    <string name="inicio_titulo_reporte_label">Reporte</string>
+    <string name="inicio_label_reporte_sub">Resumen general</string>
 
+    <string name="ic_logo">icono de probeta</string>
+    <string name="btn_inicio_texto_universidad">Sitio web Univesidad de Guayaquil</string>
+    <string name="url_universidad">https://www.ug.edu.ec</string>
 
-    <string name="btn_home_university">Sitio web Univesidad de Guayaquil</string>
-    <string name="university_url">https://www.ug.edu.ec</string>
-    
-    
-    
+    <string name="msjBienvenida">Hola %1$s Bienvenido</string>
+    <string name="msj_bienvenida_pordefecto">Hola Estudiante Bienvenido</string>
     
     <!--Preferencias-->
+    <string name="titulo">Datos del Estudiante</string>
+    <string name="descripcion">Esta información se guarda localmente en tu dispositivo (SharedPreferences).</string>
+    <string name="titulo_label">Nombre del estudiante o responsable:</string>
+    <string name="et_hint_nombre">Ej. Juan Pérez</string>
+    <string name="curso_label">Curso:</string>
+    <string name="et_hint_curso">Ej. Soft</string>
     <string name="titulo_preferencias">Preferencias</string>
     <string name="ic_back">Volver atras</string>
-    
+    <string name="msj_toast">Datos Guardados Correctamente</string>
+    <string name="btn_texto_guardarPre">Guardar Preferencias</string>
+    <string name="card_titulo">Mostrar saludo al iniciar</string>
+    <string name="card_subtitulo">Saluda con tu nombre en la pantalla principal.</string>
+    <string name="error_nombre">El campo nombre puede quedar vacio</string>
+    <string name="error_curso">El campo curso no puede quedar vacio</string>
+    <string name="btn_limpiar_texto">SharedPreferences Eliminadas</string>
 </resources>
