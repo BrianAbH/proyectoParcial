@@ -128,11 +128,14 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/cardSalute">
 
+
+            <!--Card de Registrar-->
             <androidx.cardview.widget.CardView
                 android:id="@+id/cvRegistrar"
                 android:layout_width="0dp"
                 android:layout_height="150dp"
                 android:layout_columnWeight="1"
+                android:background="@color/bg_card"
                 android:layout_margin="8dp"
                 app:cardElevation="5dp"
                 app:cardCornerRadius="8dp">
@@ -176,6 +179,7 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
+            <!--Card de Inventario-->
             <androidx.cardview.widget.CardView
                 android:layout_width="0dp"
                 android:layout_height="150dp"
@@ -223,6 +227,7 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
+            <!--Card de Preferencias-->
             <androidx.cardview.widget.CardView
                 android:id="@+id/cvPreferencias"
                 android:layout_width="0dp"
@@ -234,7 +239,7 @@
                 android:clickable="true"
                 android:focusable="true"
                 android:foreground="?android:attr/selectableItemBackground"
-                app:cardBackgroundColor="#FFFFFF">
+                app:cardBackgroundColor="@color/bg_card">
                 <!--LinearLayout con los elementos-->
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -275,6 +280,7 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
+            <!--Card de Reporte-->
             <androidx.cardview.widget.CardView
                 android:layout_width="0dp"
                 android:layout_height="150dp"

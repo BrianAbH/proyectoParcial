@@ -29,7 +29,7 @@
 
     <string name="msjBienvenida">Hola %1$s Bienvenido</string>
     <string name="msj_bienvenida_pordefecto">Hola Estudiante Bienvenido</string>
-    
+
     <!--Preferencias-->
     <string name="titulo">Datos del Estudiante</string>
     <string name="descripcion">Esta información se guarda localmente en tu dispositivo (SharedPreferences).</string>
@@ -45,5 +45,8 @@
     <string name="card_subtitulo">Saluda con tu nombre en la pantalla principal.</string>
     <string name="error_nombre">El campo nombre puede quedar vacio</string>
     <string name="error_curso">El campo curso no puede quedar vacio</string>
-    <string name="btn_limpiar_texto">Limpiar SharedPreferences</string>
+    <string name="btn_limpiar_texto">SharedPreferences Borradas</string>
+    
+    <!--Registrar-->
+    <string name="registrar_elementos">Registrar Elementos</string>
 </resources>

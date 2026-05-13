@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
     private static String NOMBRE;
     //Elementos
     private Button btnUg;
-    private CardView cvPreferencias;
+    private CardView cvPreferencias, cvRegistrar;
 
     private TextView tvSaludo;
 
@@ -45,11 +45,20 @@ public class MainActivity extends AppCompatActivity {
         saludoInicial();
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        obtenerPreferenciaNombre();
+        saludoInicial();
+    }
+
     private void iniciarComponentes(){
         //Referencias
         btnUg = findViewById(R.id.btnUriUg);
         cvPreferencias = findViewById(R.id.cvPreferencias);
+        cvRegistrar = findViewById(R.id.cvRegistrar);
         tvSaludo = findViewById(R.id.tvSaludo);
+
     }
 
     private void iniciarIntent(){
@@ -65,6 +74,12 @@ public class MainActivity extends AppCompatActivity {
             Intent iPreferencias = new Intent(this, PreferencesActivity.class);
             startActivity(iPreferencias);
         });
+
+        cvRegistrar.setOnClickListener(v->{
+            Intent iRegistrar = new Intent(this, RegistrarActivity.class);
+            startActivity(iRegistrar);
+        });
+
     }
 
 

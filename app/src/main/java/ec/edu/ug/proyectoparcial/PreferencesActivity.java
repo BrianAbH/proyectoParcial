@@ -114,6 +114,7 @@ public class PreferencesActivity extends AppCompatActivity {
         preferences.edit().clear().apply();
         etNombre.setText("");
         etCurso.setText("");
+        swSaludo.setChecked(false);
         Toast.makeText(this, R.string.btn_limpiar_texto, Toast.LENGTH_SHORT).show();
     }
 
