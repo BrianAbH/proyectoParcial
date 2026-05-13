@@ -45,5 +45,5 @@
     <string name="card_subtitulo">Saluda con tu nombre en la pantalla principal.</string>
     <string name="error_nombre">El campo nombre puede quedar vacio</string>
     <string name="error_curso">El campo curso no puede quedar vacio</string>
-    <string name="btn_limpiar_texto">SharedPreferences Eliminadas</string>
+    <string name="btn_limpiar_texto">Limpiar SharedPreferences</string>
 </resources>
