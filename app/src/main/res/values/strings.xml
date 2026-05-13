@@ -22,6 +22,11 @@
     <string name="btn_inicio_texto_universidad">Sitio web Univesidad de Guayaquil</string>
     <string name="url_universidad">https://www.ug.edu.ec</string>
 
+    <string name="ic_descripcion_registrar">icono de + para registrar</string>
+    <string name="ic_descripcion_inventario">icono de lista para el inventario</string>
+    <string name="ic_descripcion_configuracion">icono de configuracion para las configuraciones</string>
+    <string name="ic_descripcion_informe">icono de documentos para los informes</string>
+
     <string name="msjBienvenida">Hola %1$s Bienvenido</string>
     <string name="msj_bienvenida_pordefecto">Hola Estudiante Bienvenido</string>
     

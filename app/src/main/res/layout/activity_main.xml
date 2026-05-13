@@ -154,6 +154,7 @@
                         <ImageView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
+                            android:contentDescription="@string/ic_descripcion_registrar"
                             android:scaleType="centerCrop"
                             android:src="@drawable/ic_register" />
                     </androidx.cardview.widget.CardView>
@@ -200,6 +201,7 @@
                         <ImageView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
+                            android:contentDescription="@string/ic_descripcion_inventario"
                             android:scaleType="centerCrop"
                             android:src="@drawable/ic_stock" />
                     </androidx.cardview.widget.CardView>
@@ -251,6 +253,7 @@
                         <ImageView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
+                            android:contentDescription="@string/ic_descripcion_configuracion"
                             android:scaleType="centerCrop"
                             android:src="@drawable/ic_settings" />
                     </androidx.cardview.widget.CardView>
@@ -297,6 +300,7 @@
                         <ImageView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
+                            android:contentDescription="@string/ic_descripcion_informe"
                             android:scaleType="centerCrop"
                             android:src="@drawable/ic_report" />
                     </androidx.cardview.widget.CardView>
