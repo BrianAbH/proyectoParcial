@@ -4,10 +4,12 @@ plugins {
 
 android {
     namespace = "ec.edu.ug.proyectoparcial"
+
     compileSdk {
         version = release(36) {
             minorApiLevel = 1
         }
+
     }
 
     defaultConfig {
@@ -19,6 +21,7 @@ android {
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
+
 
     buildTypes {
         release {

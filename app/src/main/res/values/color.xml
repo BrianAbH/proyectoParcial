@@ -8,6 +8,7 @@
     <color name="success">#16A34A</color>
     <color name="background">#F8FAFC</color>
     <color name="bg_card">#FFFFFF</color>
+    <color name="bg_button_guardar">#005A9C</color>
     <color name="border">#E5E7EB</color>
     <color name="text">#0F172A</color>
     <color name="text_muted">#64748B</color>

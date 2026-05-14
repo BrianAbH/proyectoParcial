@@ -30,6 +30,30 @@
     <string name="msjBienvenida">Hola %1$s Bienvenido</string>
     <string name="msj_bienvenida_pordefecto">Hola Estudiante Bienvenido</string>
 
+    <!--Registrar-->
+    <string name="registrar_elementos">Registrar Elementos</string>
+    <string name="titulo_formulario">Nuevo Elemento</string>
+    <string name="subtitulo_formulario">Completa la información del equipo de laboratorio</string>
+    <string name="label_nombre">Nombre:</string>
+    <string name="hint_nombre">Ej. Microscopio óptico</string>
+    <string name="label_categoria">Categoria:</string>
+
+    <string name="label_cantidad">Cantidad:</string>
+    <string name="hint_cantidad">2</string>
+    <string name="label_ubicacion">Ubicación:</string>
+    <string name="hint_ubicacion">En el estante 2</string>
+    <string name="label_observacion">Observación:</string>
+    <string name="hint_observacion">Semi roto</string>
+    <string name="label_fecha">Fecha de registro:</string>
+    <string name="hint_fecha">05/13/2026</string>
+    <string name="titulo_boton_guardar">Guardar elemento</string>
+    <string name="msj_toast_correcto">Equipo Guardado Correctamente</string>
+    <string name="msj_toast_falla">Error al guardar</string>
+    <string name="error_nombreR">El campo nombre no puede quedar vacio</string>
+    <string name="error_cantidad">El campo cantidad no puede quedar vacio</string>
+    <string name="error_ubicacion">El campo ubicacion no puede quedar vacio</string>
+    <string name="error_observacion">El campo observación no puede quedar vacio</string>
+
     <!--Preferencias-->
     <string name="titulo">Datos del Estudiante</string>
     <string name="descripcion">Esta información se guarda localmente en tu dispositivo (SharedPreferences).</string>
@@ -45,8 +69,7 @@
     <string name="card_subtitulo">Saluda con tu nombre en la pantalla principal.</string>
     <string name="error_nombre">El campo nombre puede quedar vacio</string>
     <string name="error_curso">El campo curso no puede quedar vacio</string>
-    <string name="btn_limpiar_texto">SharedPreferences Borradas</string>
+    <string name="btn_limpiar_texto">Borrar SharedPreferences</string>
     
-    <!--Registrar-->
-    <string name="registrar_elementos">Registrar Elementos</string>
+
 </resources>

@@ -14,8 +14,7 @@ public class InventarioDao {
 
     public InventarioDao (){};
 
-    public InventarioDao(int id, String nombre, String categoria, int cantidad, String ubicacion, String observacion, String fecha_registro){
-        this.id = id;
+    public InventarioDao(String nombre, String categoria, int cantidad, String ubicacion, String observacion, String fecha_registro){
         this.nombre = nombre;
         this.categoria = categoria;
         this.cantidad = cantidad;

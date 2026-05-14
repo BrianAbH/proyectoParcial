@@ -5,8 +5,8 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 
-import androidx.annotation.Nullable;
 
 import java.util.ArrayList;
 
@@ -15,7 +15,7 @@ import ec.edu.ug.proyectoparcial.data.dao.InventarioDao;
 public class dbHelper extends SQLiteOpenHelper {
 
     private static String db_name = "inventarioUg.db";
-    private static int version = 0;
+    private static int version = 1;
     private static String table_inventario = "t_inventario";
 
     public dbHelper(Context context) {
@@ -42,16 +42,28 @@ public class dbHelper extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-    public void add(InventarioDao item){
-        SQLiteDatabase db = getWritableDatabase();
-        ContentValues values = new ContentValues();
+    public boolean add(InventarioDao item) {
+        boolean estado;
+        SQLiteDatabase db = null;
+        try {
+            db = getWritableDatabase();
+            ContentValues values = new ContentValues();
 
-        values.put("nombre", item.getNombre());
-        values.put("categoria", item.getCategoria());
-        values.put("cantidad", item.getCantidad());
-        values.put("ubicacion", item.getUbicacion());
-        values.put("observacion", item.getObservacion());
-        values.put("fecha_registro", item.getFecha_registro());
+            values.put("nombre", item.getNombre());
+            values.put("categoria", item.getCategoria());
+            values.put("cantidad", item.getCantidad());
+            values.put("ubicacion", item.getUbicacion());
+            values.put("observacion", item.getObservacion());
+            values.put("fecha_registro", item.getFecha_registro());
+            db.insert(table_inventario, null, values);
+            estado = true;
+        } catch (Exception e) {
+            Log.d("Errorrr",e.getMessage());
+            estado = false;
+        } finally {
+            db.close();
+        }
+        return estado;
     }
 
 

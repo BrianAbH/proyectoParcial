@@ -11,7 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ProyectoParcial">
         <!--Actividad Preferencias-->
-        <activity android:name=".RegistrarActivity"/>
+        <activity android:name=".RegistrarActivity" android:windowSoftInputMode="adjustPan"/>
         <activity android:name=".PreferencesActivity"/>
         <activity
             android:name=".MainActivity"
