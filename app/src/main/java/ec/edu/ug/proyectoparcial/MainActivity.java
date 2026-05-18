@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
     private static String NOMBRE;
     //Elementos
     private Button btnUg;
-    private CardView cvPreferencias, cvRegistrar;
+    private CardView cvPreferencias, cvRegistrar, cvInventario,cvReporte;
 
     private TextView tvSaludo;
 
@@ -32,7 +32,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
-
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
@@ -57,8 +56,9 @@ public class MainActivity extends AppCompatActivity {
         btnUg = findViewById(R.id.btnUriUg);
         cvPreferencias = findViewById(R.id.cvPreferencias);
         cvRegistrar = findViewById(R.id.cvRegistrar);
+        cvInventario = findViewById(R.id.cvInventario);
         tvSaludo = findViewById(R.id.tvSaludo);
-
+        cvReporte = findViewById(R.id.cvReporte);
     }
 
     private void iniciarIntent(){
@@ -80,6 +80,17 @@ public class MainActivity extends AppCompatActivity {
             startActivity(iRegistrar);
         });
 
+        cvInventario.setOnClickListener(v->{
+            Intent iInventario = new Intent(this, InventarioActivity.class);
+            startActivity(iInventario);
+        });
+
+        cvReporte.setOnClickListener(v -> {
+
+            Intent iReporte = new Intent(this, ReporteActivity.class);
+            startActivity(iReporte);
+
+        });
     }
 
 

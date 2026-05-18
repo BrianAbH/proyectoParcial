@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- HEADER -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/header"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:background="@color/primary_dark"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageButton
+                android:id="@+id/ivVolver"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="12dp"
+                android:background="@null"
+                android:contentDescription="@string/ic_back"
+                android:padding="10dp"
+                android:src="@drawable/ic_back"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvTitulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/titulo_detalle"
+                android:textColor="@color/bg_card"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/ivVolver"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- FORMULARIO PRINCIPAL -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardFormulario"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            app:cardBackgroundColor="@android:color/white"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="2dp"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/header">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="16dp">
+
+                <!-- Nombre -->
+                <TextView
+                    android:id="@+id/lblNombre"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="24dp"
+                    android:text="@string/label_nombre"
+                    android:textColor="@color/text_low"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <EditText
+                    android:id="@+id/eNombre"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@id/lblNombre"
+                    app:layout_constraintStart_toStartOf="@id/lblNombre"
+                    app:layout_constraintTop_toBottomOf="@id/lblNombre" />
+
+                <View
+                    android:id="@+id/div1"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="12dp"
+                    android:background="#E5E7EB"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/eNombre" />
+
+                <!-- Categoria -->
+                <TextView
+                    android:id="@+id/lblCategoria"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/label_categoria"
+                    android:textColor="@color/text_low"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="@id/lblNombre"
+                    app:layout_constraintStart_toStartOf="@id/lblNombre"
+                    app:layout_constraintTop_toBottomOf="@id/div1" />
+
+                <Spinner
+                    android:id="@+id/eCategoria"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    app:layout_constraintEnd_toEndOf="@id/lblNombre"
+                    app:layout_constraintStart_toStartOf="@id/lblNombre"
+                    app:layout_constraintTop_toBottomOf="@id/lblCategoria" />
+
+                <View
+                    android:id="@+id/div2"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="12dp"
+                    android:background="#E5E7EB"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/eCategoria" />
+
+                <!-- Cantidad -->
+                <TextView
+                    android:id="@+id/lblCantidad"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/label_cantidad"
+                    android:textColor="@color/text_low"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="@id/lblNombre"
+                    app:layout_constraintStart_toStartOf="@id/lblNombre"
+                    app:layout_constraintTop_toBottomOf="@id/div2" />
+
+                <EditText
+                    android:id="@+id/eCantidad"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@id/lblNombre"
+                    app:layout_constraintStart_toStartOf="@id/lblNombre"
+                    app:layout_constraintTop_toBottomOf="@id/lblCantidad" />
+
+                <View
+                    android:id="@+id/div3"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="12dp"
+                    android:background="#E5E7EB"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/eCantidad" />
+
+                <!-- Ubicacion -->
+                <TextView
+                    android:id="@+id/lblUbicacion"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/label_ubicacion"
+                    android:textColor="@color/text_low"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="@id/lblNombre"
+                    app:layout_constraintStart_toStartOf="@id/lblNombre"
+                    app:layout_constraintTop_toBottomOf="@id/div3" />
+
+                <EditText
+                    android:id="@+id/eUbicacion"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="#111827"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@id/lblNombre"
+                    app:layout_constraintStart_toStartOf="@id/lblNombre"
+                    app:layout_constraintTop_toBottomOf="@id/lblUbicacion" />
+
+                <View
+                    android:id="@+id/div4"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="12dp"
+                    android:background="#E5E7EB"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/eUbicacion" />
+
+                <!-- Observacion -->
+                <TextView
+                    android:id="@+id/lblObservacion"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/label_observacion"
+                    android:textColor="@color/text_low"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="@id/lblNombre"
+                    app:layout_constraintStart_toStartOf="@id/lblNombre"
+                    app:layout_constraintTop_toBottomOf="@id/div4" />
+
+                <EditText
+                    android:id="@+id/eObservacion"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@id/lblNombre"
+                    app:layout_constraintStart_toStartOf="@id/lblNombre"
+                    app:layout_constraintTop_toBottomOf="@id/lblObservacion" />
+
+                <View
+                    android:id="@+id/div5"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="12dp"
+                    android:background="#E5E7EB"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/eObservacion" />
+
+                <!-- Fecha -->
+                <TextView
+                    android:id="@+id/lblFecha"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/label_fecha"
+                    android:textColor="@color/text_low"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="@id/lblNombre"
+                    app:layout_constraintStart_toStartOf="@id/lblNombre"
+                    app:layout_constraintTop_toBottomOf="@id/div5" />
+
+                <DatePicker
+                    android:id="@+id/Fecha"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:calendarViewShown="false"
+                    android:datePickerMode="spinner"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/lblFecha" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- BOTONES DE ACCIÓN -->
+        <Button
+            android:id="@+id/btnModificar"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="24dp"
+            android:backgroundTint="@color/bg_button_modificar"
+            android:drawablePadding="8dp"
+            android:text="@string/txt_boton_editar"
+            android:textColor="@color/text_boton"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:icon="@drawable/ic_editar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btnEliminar"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cardFormulario" />
+
+        <Button
+            android:id="@+id/btnEliminar"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="24dp"
+            android:backgroundTint="#D30013"
+            android:drawablePadding="8dp"
+            android:text="@string/txt_boton_eliminar"
+            android:textColor="@color/text_white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:icon="@drawable/ic_eliminar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@id/btnModificar"
+            app:layout_constraintTop_toBottomOf="@id/cardFormulario" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

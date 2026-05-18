@@ -60,16 +60,12 @@ public class RegistrarActivity extends AppCompatActivity {
         });
 
 
-
-
         iniciarViews();
         volverMennu();
         obtenerFecha();
         obtenerPosicionCategoria();
         iniciarSpinner();
         guardar();
-
-
 
     }
 
@@ -80,7 +76,7 @@ public class RegistrarActivity extends AppCompatActivity {
         spCategoria = findViewById(R.id.spCategoria);
         etCantidad = findViewById(R.id.etCantidad);
         etUbicacion = findViewById(R.id.etUbicacion);
-        etObservacion = findViewById(R.id.etObservación);
+        etObservacion = findViewById(R.id.etObservacion);
         fecha = findViewById(R.id.dpFecha);
     }
 
@@ -92,7 +88,7 @@ public class RegistrarActivity extends AppCompatActivity {
             String ubicacion = etUbicacion.getText().toString().trim();
             String observacion = etObservacion.getText().toString().trim();
             boolean hayError = false;
-            if (etNombre.getText().toString().isEmpty() ){
+            if (nombre.isEmpty() ){
                 etNombre.setError(getString(R.string.error_nombreR));
                 hayError = true;
             }
@@ -101,12 +97,12 @@ public class RegistrarActivity extends AppCompatActivity {
                 hayError = true;
             }
 
-            if (etUbicacion.getText().toString().isEmpty()){
+            if (ubicacion.isEmpty()){
                 etUbicacion.setError(getString(R.string.error_ubicacion));
                 hayError = true;
             }
 
-            if (etObservacion.getText().toString().isEmpty()){
+            if (observacion.isEmpty()){
                 etObservacion.setError(getString(R.string.error_observacion));
                 hayError = true;
             }
@@ -134,7 +130,7 @@ public class RegistrarActivity extends AppCompatActivity {
 
         ArrayAdapter<String> adaptador = new ArrayAdapter<>(
                 this,
-                android.R.layout.simple_spinner_dropdown_item,
+                R.layout.spinner_dropdown_item,
                 categorias
         );
 

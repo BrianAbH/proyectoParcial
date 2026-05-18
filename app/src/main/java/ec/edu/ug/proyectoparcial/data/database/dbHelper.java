@@ -66,7 +66,6 @@ public class dbHelper extends SQLiteOpenHelper {
         return estado;
     }
 
-
     public ArrayList<InventarioDao> getAllItem(){
         ArrayList<InventarioDao> items = new ArrayList<>();
 
@@ -93,11 +92,50 @@ public class dbHelper extends SQLiteOpenHelper {
         return items;
     }
 
+    public InventarioDao getById(int id){
+        InventarioDao item = new InventarioDao();
+        String querySelect = "SELECT * FROM " + table_inventario + " where id = " + id;
 
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = db.rawQuery(querySelect,null);
 
+        if (cursor.moveToFirst()){
+            item.setId(cursor.getInt(0));
+            item.setNombre(cursor.getString(1));
+            item.setCategoria(cursor.getString(2));
+            item.setCantidad(cursor.getInt(3));
+            item.setUbicacion(cursor.getString(4));
+            item.setObservacion(cursor.getString(5));
+            item.setFecha_registro(cursor.getString(6));
+        }
+        return item;
+    }
 
+    public int update(InventarioDao item, int id){
+        SQLiteDatabase db = this.getWritableDatabase();
+        try {
+            ContentValues values = new ContentValues();
 
+            values.put("nombre", item.getNombre());
+            values.put("categoria", item.getCategoria());
+            values.put("cantidad", item.getCantidad());
+            values.put("ubicacion", item.getUbicacion());
+            values.put("observacion", item.getObservacion());
+            values.put("fecha_registro", item.getFecha_registro());
+            int lineas = db.update(table_inventario,values,"id = ?", new String[]{String.valueOf(id)});
+            return lineas;
+        } catch (Exception e) {
+            return 0;
+        }finally {
+            db.close();
+        }
+    }
 
+    public int delete(int id){
+        SQLiteDatabase db = this.getWritableDatabase();
+        int log = db.delete(table_inventario, "id = ?", new String[]{String.valueOf(id)});
+        return log;
+    }
 
 
 }

@@ -50,9 +50,36 @@
     <string name="msj_toast_correcto">Equipo Guardado Correctamente</string>
     <string name="msj_toast_falla">Error al guardar</string>
     <string name="error_nombreR">El campo nombre no puede quedar vacio</string>
-    <string name="error_cantidad">El campo cantidad no puede quedar vacio</string>
+    <string name="error_cantidad">La cantidad debe ser mayor que cero</string>
     <string name="error_ubicacion">El campo ubicacion no puede quedar vacio</string>
     <string name="error_observacion">El campo observación no puede quedar vacio</string>
+
+    <!--Inventario-->
+    <string name="titulo_inventario">Inventario</string>
+    <string name="hint_buscar">Buscar por nombre</string>
+    <string name="txt_boton_buscar">Buscar</string>
+    <string name="txt_boton_agregar">Agregar</string>
+    <string name="txt_elementos">Elementos: %1$d</string>
+
+    <!--Detalle-->
+    <string name="titulo_detalle">Detalle</string>
+    <string name="txt_boton_editar">Modificar</string>
+    <string name="txt_boton_eliminar">Eliminar</string>
+    <string name="msg_toast_correcto">"Datos Actualizados"</string>
+    <string name="msg_toast_fallo">"Datos no pudieron actualizarse"</string>
+
+    <!--Reporte-->
+    <string name="titulo_reporte">Reportes</string>
+    <string name="subtitulo_reporte">Genera y comparte reportes del inventario académico.</string>
+    <string name="label_reporte">Reporte interno</string>
+    <string name="label_subReporte">Guarda el archivo en la memoria interna de la app.</string>
+    <string name="txt_boton_interno">Generar reporte interno</string>
+    <string name="label_reporte_externo">Reporte externo</string>
+    <string name="label_reporte_externo_subtitulo">Exporta el archivo al directorio externo de la app.</string>
+    <string name="txt_boton_externo">Exportar reporte</string>
+    <string name="label_compartir">Compartir reporte</string>
+    <string name="label_campartir_sub">Comparte el reporte mediante Intent implícito.</string>
+    <string name="txt_boton_Compartir">Compartir reporte</string>
 
     <!--Preferencias-->
     <string name="titulo">Datos del Estudiante</string>

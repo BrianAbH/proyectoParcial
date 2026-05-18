@@ -10,8 +10,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ProyectoParcial">
-        <!--Actividad Preferencias-->
+        <!--Actividad Registrar-->
         <activity android:name=".RegistrarActivity" android:windowSoftInputMode="adjustPan"/>
+        <!--Actividad Inventario-->
+        <activity android:name=".InventarioActivity"/>
+        <!--Actividad Detalle-->
+        <activity android:name=".DetalleActivity"/>
+        <!-- Actividad Reporte -->
+        <activity android:name=".ReporteActivity"
+            android:exported="false" />
+        <!--Actividad Preferencias-->
         <activity android:name=".PreferencesActivity"/>
         <activity
             android:name=".MainActivity"
