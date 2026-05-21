@@ -50,6 +50,7 @@
     <string name="msj_toast_correcto">Equipo Guardado Correctamente</string>
     <string name="msj_toast_falla">Error al guardar</string>
     <string name="error_nombreR">El campo nombre no puede quedar vacio</string>
+    <string name="error_nombreNumero">El campo nombre no puede contener numeros</string>
     <string name="error_cantidad">La cantidad debe ser mayor que cero</string>
     <string name="error_ubicacion">El campo ubicacion no puede quedar vacio</string>
     <string name="error_observacion">El campo observación no puede quedar vacio</string>
@@ -107,6 +108,5 @@
     <string name="error_nombre">El campo nombre puede quedar vacio</string>
     <string name="error_curso">El campo curso no puede quedar vacio</string>
     <string name="btn_limpiar_texto">Borrar SharedPreferences</string>
-    
 
 </resources>

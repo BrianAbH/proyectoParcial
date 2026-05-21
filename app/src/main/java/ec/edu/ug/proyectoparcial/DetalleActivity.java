@@ -137,6 +137,10 @@ public class DetalleActivity extends AppCompatActivity {
                 eNombre.setError(getString(R.string.error_nombreR));
                 return;
             }
+            if (Integer.parseInt(nombre)>=0){
+                eNombre.setError(getString(R.string.error_nombreNumero));
+                return;
+            }
             if (ubicacion.isEmpty()) {
                 eNombre.setError(getString(R.string.error_ubicacion));
                 return;

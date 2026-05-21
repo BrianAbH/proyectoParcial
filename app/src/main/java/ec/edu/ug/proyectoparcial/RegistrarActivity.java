@@ -88,11 +88,15 @@ public class RegistrarActivity extends AppCompatActivity {
             String ubicacion = etUbicacion.getText().toString().trim();
             String observacion = etObservacion.getText().toString().trim();
             boolean hayError = false;
-            if (nombre.isEmpty() ){
+            if (nombre.isEmpty()){
                 etNombre.setError(getString(R.string.error_nombreR));
                 hayError = true;
             }
-            if (etCantidad.getText().toString().isEmpty()){
+            if (Integer.parseInt(nombre)>=0){
+                etNombre.setError(getString(R.string.error_nombreNumero));
+                hayError = true;
+            }
+            if (etCantidad.getText().toString().isEmpty() || Integer.parseInt(etCantidad.getText().toString())<=0){
                 etCantidad.setError(getString(R.string.error_cantidad));
                 hayError = true;
             }
