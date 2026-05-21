@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_detalle"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background"
@@ -273,7 +274,7 @@
             android:backgroundTint="@color/bg_button_modificar"
             android:drawablePadding="8dp"
             android:text="@string/txt_boton_editar"
-            android:textColor="@color/text_boton"
+            android:textColor="@color/text_white"
             android:textSize="16sp"
             android:textStyle="bold"
             app:icon="@drawable/ic_editar"

@@ -24,13 +24,11 @@ public class PreferencesActivity extends AppCompatActivity {
     private static String NOMBRE = "NOMBRE";
     private static String CURSO = "CURSO";
     private static String ESTADO = "ESTADO";
-
+    private SharedPreferences preferences;
     private ImageButton ivVolver;
     private EditText etNombre, etCurso;
     private Button btnGuardarPrfs, btnLimpiar;
     private Switch swSaludo;
-
-    private SharedPreferences preferences;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -50,7 +48,6 @@ public class PreferencesActivity extends AppCompatActivity {
         llenarCampos();
         guardarEstado();
     }
-
     private void iniciarComponenetes(){
         ivVolver = findViewById(R.id.ivVolver);
         etNombre = findViewById(R.id.etNombre);
@@ -61,23 +58,24 @@ public class PreferencesActivity extends AppCompatActivity {
 
         btnLimpiar.setOnClickListener(v->eliminarPreferencias());
     }
-
     private void validarCampos(){
         btnGuardarPrfs.setOnClickListener(v->{
-            if (etNombre.getText().toString().isEmpty() || etCurso.getText().toString().isEmpty()){
+            if (etNombre.getText().toString().isEmpty()){
                 etNombre.setError(getString(R.string.error_nombre));
-                etCurso.setError(getString(R.string.error_curso));
-            }else{
-                guardarPrfs();
+                return;
             }
+            if (etCurso.getText().toString().isEmpty()){
+                etCurso.setError(getString(R.string.error_curso));
+                return;
+            }
+            guardarPrfs();
         });
     }
-
     private void guardarPrfs(){
-        preferences.edit()
-        .putString(NOMBRE, etNombre.getText().toString().trim())
-        .putString(CURSO, etCurso.getText().toString().trim())
-        .apply();
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.putString(NOMBRE, etNombre.getText().toString().trim());
+        editor.putString(CURSO, etCurso.getText().toString().trim());
+        editor.apply();
         Toast.makeText(this,R.string.msj_toast, Toast.LENGTH_LONG).show();
     }
 

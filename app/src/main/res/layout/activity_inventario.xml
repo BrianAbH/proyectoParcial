@@ -69,6 +69,7 @@
                     style="@style/FormInput"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:autofillHints="name"
                     android:drawableStart="@drawable/ic_buscar"
                     android:drawablePadding="10dp"
                     android:hint="@string/hint_buscar"
@@ -88,8 +89,7 @@
                     android:id="@+id/tvElementos"
                     android:layout_width="0dp"
                     android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:text="Elementos: "/>
+                    android:layout_height="wrap_content"/>
 
                 <Button
                     android:id="@+id/btnAgregar"

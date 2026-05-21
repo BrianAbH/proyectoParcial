@@ -113,7 +113,6 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>
 
-        <!--SECCIÓN DE TARJETAS-->
         <!-- Card de Registrar -->
         <androidx.cardview.widget.CardView
             android:id="@+id/cvRegistrar"

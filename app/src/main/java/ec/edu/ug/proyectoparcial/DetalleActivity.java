@@ -11,8 +11,12 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import androidx.activity.EdgeToEdge;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -39,7 +43,13 @@ public class DetalleActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_detalle);
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.activity_detalle), (v, insets) -> {
+            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
+            return insets;
+        });
         //Referencias del intent
         idIntent = getIntent().getIntExtra("ID",0);
         db = new dbHelper(this);
@@ -85,12 +95,12 @@ public class DetalleActivity extends AppCompatActivity {
     }
 
     private void setearCampos(){
-        eNombre.setText(item.getNombre().toString());
+        eNombre.setText(item.getNombre());
         eCantidad.setText(String.valueOf(item.getCantidad()));
-        idC = categorias.indexOf(item.getCategoria().toString());
+        idC = categorias.indexOf(item.getCategoria());
         eCategoria.setSelection(idC);
-        eUbicacion.setText(item.getUbicacion().toString());
-        eObservacion.setText(item.getObservacion().toString());
+        eUbicacion.setText(item.getUbicacion());
+        eObservacion.setText(item.getObservacion());
     }
 
     private  void setearFecha(){
@@ -150,17 +160,18 @@ public class DetalleActivity extends AppCompatActivity {
 
     private void eliminar(){
         btnEliminar.setOnClickListener(v->{
-            new AlertDialog.Builder(this).setTitle("Confirmar Eliminación")
-                                                .setMessage("Esta seguro que quiere eliminar este item")
-                                                .setPositiveButton("Si", (dialog, which) -> {
-                                                    if (db.delete(idIntent) ==1){
-                                                        Toast.makeText(this, "Item Eliminado Correctamente", Toast.LENGTH_SHORT).show();
-                                                        onDestroy();
-                                                    }else{
-                                                        Toast.makeText(this, "Item Eliminado Correctamente", Toast.LENGTH_SHORT).show();
-                                                    }
-                                                })
-                                                .setNegativeButton("No", null).show();
+            new AlertDialog.Builder(this).setTitle(R.string.confirmar_eliminacion)
+                    .setMessage(R.string.mensaje_eliminar_item)
+                    .setPositiveButton(R.string.btn_si, (dialog, which) -> {
+                        if (db.delete(idIntent) == 1) {
+                            Toast.makeText(this, R.string.item_eliminado_correctamente, Toast.LENGTH_SHORT).show();
+                            finish();
+                        } else {
+                            Toast.makeText(this, R.string.error_eliminar_item, Toast.LENGTH_SHORT).show();
+                        }
+                    })
+                    .setNegativeButton(R.string.btn_no, null)
+                    .show();
         });
     }
 

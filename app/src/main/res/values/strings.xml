@@ -67,6 +67,12 @@
     <string name="txt_boton_eliminar">Eliminar</string>
     <string name="msg_toast_correcto">"Datos Actualizados"</string>
     <string name="msg_toast_fallo">"Datos no pudieron actualizarse"</string>
+    <string name="confirmar_eliminacion">Confirmar Eliminación</string>
+    <string name="mensaje_eliminar_item">¿Está seguro de que quiere eliminar este ítem?</string>
+    <string name="btn_si">Sí</string>
+    <string name="btn_no">No</string>
+    <string name="item_eliminado_correctamente">Ítem eliminado correctamente</string>
+    <string name="error_eliminar_item">Error al eliminar el ítem</string>
 
     <!--Reporte-->
     <string name="titulo_reporte">Reportes</string>
@@ -80,6 +86,10 @@
     <string name="label_compartir">Compartir reporte</string>
     <string name="label_campartir_sub">Comparte el reporte mediante Intent implícito.</string>
     <string name="txt_boton_Compartir">Compartir reporte</string>
+    <string name="nombre_default_estudiante">Estudiante</string>
+    <string name="toast_reporte_interno_generado">Reporte interno generado</string>
+    <string name="toast_archivo_exportado">Archivo exportado en:\n%s</string>
+    <string name="chooser_compartir_reporte">Compartir reporte con...</string>
 
     <!--Preferencias-->
     <string name="titulo">Datos del Estudiante</string>
