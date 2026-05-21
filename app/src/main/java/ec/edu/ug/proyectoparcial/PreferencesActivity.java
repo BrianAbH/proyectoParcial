@@ -64,10 +64,6 @@ public class PreferencesActivity extends AppCompatActivity {
                 etNombre.setError(getString(R.string.error_nombre));
                 return;
             }
-            if (Integer.parseInt(etNombre.getText().toString())>=0){
-                etNombre.setError(getString(R.string.error_nombreNumero));
-                return;
-            }
             if (etCurso.getText().toString().isEmpty()){
                 etCurso.setError(getString(R.string.error_curso));
                 return;
