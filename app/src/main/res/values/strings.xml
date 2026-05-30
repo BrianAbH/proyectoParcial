@@ -108,5 +108,6 @@
     <string name="error_nombre">El campo nombre puede quedar vacio</string>
     <string name="error_curso">El campo curso no puede quedar vacio</string>
     <string name="btn_limpiar_texto">Borrar SharedPreferences</string>
+    <string name="btn_limpiar">SharedPreferences Borradas</string>
 
 </resources>

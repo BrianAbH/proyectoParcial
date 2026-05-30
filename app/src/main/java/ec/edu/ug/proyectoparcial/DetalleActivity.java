@@ -137,10 +137,6 @@ public class DetalleActivity extends AppCompatActivity {
                 eNombre.setError(getString(R.string.error_nombreR));
                 return;
             }
-            if (Integer.parseInt(nombre)>=0){
-                eNombre.setError(getString(R.string.error_nombreNumero));
-                return;
-            }
             if (ubicacion.isEmpty()) {
                 eNombre.setError(getString(R.string.error_ubicacion));
                 return;
@@ -154,7 +150,7 @@ public class DetalleActivity extends AppCompatActivity {
                 return;
             }
             int cantidad = Integer.parseInt(eCantidad.getText().toString());
-            if (db.update(new InventarioDao(nombre,categoria,cantidad,ubicacion,observacion,fecha_registro), idIntent) ==1){
+            if (db.update(new InventarioDao(nombre,categoria,cantidad,ubicacion,observacion,fecha_registro), idIntent) == 1){
                 Toast.makeText(this,R.string.msg_toast_correcto, Toast.LENGTH_SHORT).show();
             }else{
                 Toast.makeText(this,R.string.msg_toast_fallo, Toast.LENGTH_SHORT).show();

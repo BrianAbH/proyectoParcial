@@ -45,7 +45,6 @@ public class RegistrarActivity extends AppCompatActivity {
     private String fecha_registro;
 
     private dbHelper db;
-    private Calendar today = Calendar.getInstance();
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -81,7 +80,6 @@ public class RegistrarActivity extends AppCompatActivity {
     }
 
     private void guardar(){
-
         btnGuardar.setOnClickListener(v->{
             String nombre = etNombre.getText().toString().trim();
             String categoria = categorias.get(posicion);
@@ -90,10 +88,6 @@ public class RegistrarActivity extends AppCompatActivity {
             boolean hayError = false;
             if (nombre.isEmpty()){
                 etNombre.setError(getString(R.string.error_nombreR));
-                hayError = true;
-            }
-            if (Integer.parseInt(nombre)>=0){
-                etNombre.setError(getString(R.string.error_nombreNumero));
                 hayError = true;
             }
             if (etCantidad.getText().toString().isEmpty() || Integer.parseInt(etCantidad.getText().toString())<=0){
@@ -139,11 +133,9 @@ public class RegistrarActivity extends AppCompatActivity {
         );
 
         spCategoria.setAdapter(adaptador);
-
     }
 
     private void obtenerFecha(){
-
         int dia = fecha.getDayOfMonth();
         int mes = fecha.getMonth() + 1;
         int anio = fecha.getYear();

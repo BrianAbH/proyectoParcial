@@ -58,7 +58,7 @@ public class dbHelper extends SQLiteOpenHelper {
             db.insert(table_inventario, null, values);
             estado = true;
         } catch (Exception e) {
-            Log.d("Errorrr",e.getMessage());
+            Log.d("Error",e.getMessage());
             estado = false;
         } finally {
             db.close();

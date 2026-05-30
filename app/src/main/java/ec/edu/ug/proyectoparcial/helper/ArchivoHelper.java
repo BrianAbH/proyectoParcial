@@ -76,7 +76,7 @@ public class ArchivoHelper {
     public static String guardarArchivoExterno(Context context, String contenido){
         try {
             File directorio = context.getExternalFilesDir(null);
-            File archivo = new File(directorio, "reporte_inventario.txt");
+            File archivo = new File(directorio, "reporte_inventario_externo.txt");
             FileOutputStream fos = new FileOutputStream(archivo);
             byte[] bytes = contenido.getBytes();
             fos.write(bytes);
